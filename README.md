@@ -5,19 +5,19 @@ Social Graph Search
 This project simulates how a social media app like FaceByte can use classic AI search algorithms: Breadth-First Search (BFS), Depth-First Search (DFS), and A* to trace user connections on a social network graph. Each user is a node, and friendship or interaction links between users form edges with weights representing either connection strength or similarity. The goalis to find friend paths and suggest new connections by analyzing the shortest or most "diverse" paths between users.
 
 ## Features Implemented
-### 1. breadth_first_search(start, end, graph)
+### 1. breadth_first_search (start, end, graph)
 Finds the shortest path (by number of hops) between users. Ideal for “Find Friends” functionality.
 - Uses connection-only time maps
 - Implements tree search, avoids cycles
 - Explores level by level (friend → friend-of-friend, etc.)
 
-### 2. depth_first_search(start, end, graph)
+### 2. depth_first_search (start, end, graph)
 Finds a path (not guaranteed to be shortest) using a depth-first strategy. Explores paths deeply before backtracking.
 - Also supports the “Find Friends” feature
 - Does not track visited nodes (as per assignment rules)
 - Suitable for graphs without loops
 
-### 3. a_star_search(start, end, graph, heuristic)
+### 3. a_star_search (start, end, graph, heuristic)
 Finds the most “dissimilar” path with minimum total similarity points, using A* with a heuristic.
 - Powers the “Suggested Friends” feature
 - Uses:
